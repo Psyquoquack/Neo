@@ -6,7 +6,7 @@ from art import *
 from termcolor import colored
 
 def frame():
-    system("clear")
+    system("clear||cls")
     print(colored(text2art("Neo".center(30)),'cyan'))
     print(colored("Created by Psyquoquack-pack\n\n".center(60),'red'))
     print("[1]- Python payload\n[2]- Python payload for windows\n[3]- Install requirements\n\n")
