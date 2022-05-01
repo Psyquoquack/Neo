@@ -8,3 +8,4 @@ Neo est un tool / outil pour crée des backdoor sur Windows et Linux pour Window
  - 3
 
 And now have a good time !
+NOT SUPPORTED BY WINDOWS >20H
