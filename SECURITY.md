@@ -7,7 +7,7 @@ currently being supported with security updates.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 1.0.0   |         X          |
+| 1.0.0   |  only on >20H Win  |
 | 1.0.0<  |                    | 
 ## Reporting a Vulnerability
 
